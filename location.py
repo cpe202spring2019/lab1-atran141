@@ -9,8 +9,8 @@ class Location:
 
     def __eq__(self, other):
     	return self.name == other.name and \
-    	self.lat == other.lat and \
-    	self.lon == other.lon
+    	isclose(self.lat, other.lat) and \
+    	isclose(self.lon, other.lon)
 
     def __repr__(self):
     	return "Location('%s', %s, %s)" % (self.name, self.lat, self.lon)
